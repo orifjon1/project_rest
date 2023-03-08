@@ -1,6 +1,6 @@
 from django.urls import path
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from .views import UserView, SectorView, TaskView, TaskDisplayView, TaskReviewView
+from .views import UserView, SectorView, TaskView, TaskDisplayView, TaskReviewView, TaskViewSet
 
 urlpatterns = [
     path('token/', TokenObtainPairView.as_view(), name='token'),
@@ -10,4 +10,5 @@ urlpatterns = [
     path('task/', TaskView.as_view(), name='task'),
     path('task/review/<int:id>/', TaskReviewView.as_view(), name='review'),
     path('status/', TaskDisplayView.as_view(), name='status'),
+    path('tasks/', TaskViewSet.as_view(), name='tasks'),
 ]

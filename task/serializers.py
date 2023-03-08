@@ -3,8 +3,6 @@ from rest_framework import serializers
 from users.serializers import UserSerializer
 
 
-
-
 class TaskSerializer(serializers.ModelSerializer):
     boss = serializers.ReadOnlyField(source='self.request.user')
     remain_days = serializers.SerializerMethodField()
