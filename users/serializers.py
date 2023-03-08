@@ -1,6 +1,5 @@
 from .models import Sector, CustomUser
 from rest_framework import serializers
-from django.db.models import Count, Case, When, IntegerField, F
 
 
 class SectorSerializer(serializers.ModelSerializer):
